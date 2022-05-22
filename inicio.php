@@ -5,6 +5,7 @@
     $sql="SELECT *  FROM registro";
     $query=mysqli_query($con,$sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,15 +21,15 @@
                     <div class="row"> 
                         
                         <div class="col-md-3">
-                            <h1>Ingrese datos</h1>
+                            <h1>REGISTRATE</h1>
                                 <form action="insertar.php" method="POST">
 
-                                    <input type="text" class="form-control mb-3" name="cod_registro" placeholder="cod registro">
-                                    <input type="text" class="form-control mb-3" name="documento" placeholder="Documento">
-                                    <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres">
-                                    <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos">
+                                    <input type="number" class="form-control mb-3" name="cod registro" placeholder="COD REGISTRO" maxlength="11" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                    <input type="number" class="form-control mb-3" name="documento" placeholder="DOCUMENTO" maxlength="20" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                    <input type="text" class="form-control mb-3" name="nombres" placeholder="NOMBRE" maxlength="30" >
+                                    <input type="text" class="form-control mb-3" name="apellidos" placeholder="APELLIDOS" maxlength="40">
                                     
-                                    <input type="submit" class="btn btn-primary">
+                                    <input type="submit" class="btn btn-primary" value="ENVIAR">
                                 </form>
                         </div>
 
@@ -36,10 +37,10 @@
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
-                                        <th>Codigo</th>
-                                        <th>Documento</th>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
+                                        <th>CODIGO </th>
+                                        <th>DOCUMENTO</th>
+                                        <th>NOMBRES</th>
+                                        <th>APELLIDOS</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
